@@ -12,13 +12,21 @@ ROS를 기반으로한 로봇이 사람을 따라다니며 보조한다.
 * [ROS2 humble 설치](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html#install-ros-2-packages) (로봇구동을 위한 meta OS)
 ```
 sudo apt update
-```
-```
 sudo apt upgrade
 ```
 ```
 sudo apt install ros-humble-desktop-full
 ```
+설치 검증
+* 터미널1
+```
+ros2 run demo_nodes_py talker
+```
+* 터미널2
+```
+ros2 run demo_nodes_py listener
+```
+통신이 되는지 확인
 
 <details>
 <summary> WSL 환경에서 ROS2 설치 (https://roytravel.tistory.com/378)</summary>
@@ -46,20 +54,14 @@ sudo apt upgrade
 ```
 sudo apt install ros-humble-desktop-full
 ```
-6. ROs2 설치 검증
-* 터미널1
+
+터미널 실행시마다 source 입력을 해줘야함
 ```
 source /opt/ros/humble/setup.bash
-ros2 run demo_nodes_py talker
 ```
-* 터미널2
-```
-ros2 run demo_nodes_py listener
-```
-통신이 되는지 확인, 
-터미널 실행시마다 source 입력을 해줘야함
+터미널이 실행될 때 자동으로 실행
 ```
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 ```
-터미널이 실행될 때 자동으로 실행
+
 </details>
