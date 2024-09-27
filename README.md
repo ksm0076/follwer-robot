@@ -9,7 +9,8 @@ ROS를 기반으로한 로봇이 사람을 따라다니며 보조한다.
 우분투 : 22.04
 
 # 개발환경
-* [ROS2 humble 설치](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html#install-ros-2-packages) (로봇구동을 위한 meta OS)
+
+## [ROS2 humble 설치](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html#install-ros-2-packages) (로봇구동을 위한 meta OS)
 ```
 sudo apt update
 sudo apt upgrade
@@ -17,7 +18,16 @@ sudo apt upgrade
 ```
 sudo apt install ros-humble-desktop-full
 ```
-설치 검증
+## 설치 검증
+
+터미널 실행시마다 source 입력을 해줘야함
+```
+source /opt/ros/humble/setup.bash
+```
+터미널이 실행될 때 자동으로 실행되게 하기
+```
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+```
 * 터미널1
 ```
 ros2 run demo_nodes_py talker
@@ -54,14 +64,4 @@ sudo apt upgrade
 ```
 sudo apt install ros-humble-desktop-full
 ```
-
-터미널 실행시마다 source 입력을 해줘야함
-```
-source /opt/ros/humble/setup.bash
-```
-터미널이 실행될 때 자동으로 실행
-```
-echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
-```
-
 </details>
