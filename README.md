@@ -44,3 +44,9 @@ ros2 run demo_nodes_py talker
 ros2 run demo_nodes_py listener
 ```
 통신이 되는지 확인
+
+**1. yolo로 사람 객체인식, 토픽으로 이미지를 발행**
+
+**2. 객체 인식된 이미지에서 바운딩 박스의 좌표를 이용해 로봇 월드의 좌표로 변환**
+
+**3. navigation 기능을 이용, 목표 좌표로 주행**
