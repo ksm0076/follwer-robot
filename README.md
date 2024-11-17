@@ -50,3 +50,14 @@ ros2 run demo_nodes_py listener
 **2. 객체 인식된 이미지에서 바운딩 박스의 좌표를 이용해 로봇 월드의 좌표로 변환**
 
 **3. navigation 기능을 이용, 목표 좌표로 주행**
+
+---
+
+## 1. segment_human.py
+- 카메라에서 발행되는 이미지를 구독
+- 그 이미지에서, yolo를 이용해 사람 객체 검출
+- 검출한 사람의 bounding box 좌표를 이용해 3D 좌표로 변환 -> publish
+
+## 2. cmd_robot.py
+- segment_human.py 에서 받은 3D 좌표 -> (x,y) 값 이용해서 각도, 거리 계산
+- cmd_vel 발행해서 로봇 이동
